@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GreetingCard3</string>
+    <string-array name="greetings">
+        <item>Happy Birthday</item>
+        <item>Ramadan Mubarak</item>
+        <item>Merry Christmas</item>
+    </string-array>
+</resources>
