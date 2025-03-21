@@ -21,7 +21,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/etName"
@@ -35,47 +38,58 @@
             android:textSize="34sp"
             android:textStyle="@string/appbar_scrolling_view_behavior" />
 
-        <Button
-            android:id="@+id/btnCreatecard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="Create card"
-            android:textColor="@color/material_dynamic_tertiary0"
-            android:textColorLink="@color/material_dynamic_neutral0"
-            android:textSize="24sp" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
                 android:hint="hint"
                 android:textColor="@color/design_default_color_background"
                 android:textColorLink="@color/material_dynamic_primary20" />
 
-            <Button
-                android:id="@+id/btnclear"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="clear"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="124dp"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                app:layout_constraintBottom_toTopOf="@+id/btnclear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+
+            <Button
+                android:id="@+id/btnCreatecard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="80dp"
+                android:backgroundTint="@color/material_dynamic_neutral80"
+                android:fontFamily="sans-serif-black"
+                android:text="Create card"
+                android:textColor="@color/material_dynamic_tertiary0"
+                android:textColorLink="@color/material_dynamic_neutral0"
+                android:textSize="24sp"
+                android:typeface="serif"
+                app:rippleColor="@color/material_dynamic_neutral80" />
+
+            <Button
+                android:id="@+id/Clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="80dp"
+                android:backgroundTint="@color/material_dynamic_neutral80"
+                android:text="Clear"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvDisplay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
+                android:text="CardView"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
